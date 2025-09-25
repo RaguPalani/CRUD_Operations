@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://crud-operations-backend-dkg7.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -60,5 +60,6 @@ export const taskService = {
   delete: (id) => 
     api.delete(`/tasks/${id}`).then(res => res.data)
 };
+
 
 export default api;
